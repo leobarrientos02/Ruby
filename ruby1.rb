@@ -99,3 +99,20 @@ end
 result = calc_average(5,10)
 
 puts result
+
+
+#CONDITIONALS
+num = -4
+
+if num > 0
+  puts 'positive'
+elsif  num < 0
+  # Ruby uses elsif
+  puts 'negative'
+else
+  puts "it is zero"
+end
+
+if num % 2 == 0
+  puts "even"
+end
