@@ -85,3 +85,63 @@ end
 print yell(["hello", "world"]) # => ["hello!", "world!"]
 puts
 print yell(["code", "is", "cool"]) # => ["code!", "is!", "cool!"]
+
+
+print "\n"
+#Method element_times_index(nums) that takes in an array of numbers and returns a new array containing every number of the original array multiplied with its index.
+def element_times_index(numbers)
+numbers2 = []
+
+i=0
+while i < numbers.length
+
+numbers2 << numbers[i] * i
+i+=1
+end
+
+return numbers2
+
+end
+
+print element_times_index([4, 7, 6, 5])       # => [0, 7, 12, 15]
+puts
+print element_times_index([1, 1, 1, 1, 1, 1]) # => [0, 1, 2, 3, 4, 5]
+
+
+print "\n"
+#EvenNums: method that takes in a number max and returns an array containing all even numbers from 0 to max
+def even_nums(max)
+
+nums = []
+
+i=0
+while i <= max
+nums << i
+i+=2
+end
+return nums
+end
+
+print even_nums(10) # => [0, 2, 4, 6, 8, 10]
+puts
+print even_nums(5)  # => [0, 2, 4]
+
+
+print "\n"
+#Fizz Buzz: method that takes in a number max and returns an array containing all numbers greater than 0 and less than max that are divisible by either 4 or 6, but not both.
+def fizz_buzz(max)
+
+nums = []
+i=0
+while i <= max
+if (i % 4 == 0 || i % 6 == 0) && !(i % 4 == 0 && i % 6 == 0)
+  nums << i
+end
+i+=2
+end
+return nums
+end
+
+print fizz_buzz(20) # => [4, 6, 8, 16, 18]
+puts
+print fizz_buzz(15) # => [4, 6, 8]
