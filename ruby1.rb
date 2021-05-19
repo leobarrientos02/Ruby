@@ -116,3 +116,84 @@ end
 if num % 2 == 0
   puts "even"
 end
+
+# divisble by 3 or 5 not both
+def either_only(number)
+
+  if (number % 3 == 0 || number % 5 == 0) && !(number % 3 == 0 && number % 5 == 0)
+    return true
+  else
+    return false
+  end
+end
+
+puts either_only(15)
+puts either_only(9)
+
+#Larger number
+def larger_number(num1, num2)
+
+  if  num1 > num2
+    return num1
+  else
+    return num2
+  end
+end
+
+puts larger_number(42, 28)   # => 42
+puts larger_number(99, 100)  # => 100
+
+#Method to find the longer String
+def longer_string(str1, str2)
+  length1 = str1.length
+  length2 = str2.length
+
+  if length1 > length2
+    return str1
+  elsif length1 == length2
+    return str1
+  else
+    return str2
+  end
+end
+
+puts longer_string("app", "academy") # => "academy"
+puts longer_string("summer", "fall") # => "summer"
+puts longer_string("hello", "world") # => "hello"
+
+
+#Method that takes in a number and returns a string
+def number_check(num)
+  if num < 0
+    return 'negative'
+  elsif num > 0
+    return 'positive'
+  else
+    return 'zero'
+  end
+
+end
+
+puts number_check(5)    # => "positive"
+puts number_check(-2)   # => "negative"
+puts number_check(0)    # => "zero"
+
+#Method that takes in a word and returns a string.
+#The method should return the string "long" if the word is longer
+#than 6 characters, "short" if it is less than 6 characters, and
+#{}"medium" if it is exactly 6 characters long.
+def word_check(word)
+  strlen = word.length
+
+  if strlen > 6
+    return 'long'
+  elsif strlen < 6
+    return 'short'
+  else
+    return 'medium'
+  end
+end
+
+puts word_check("contraption") # => "long"
+puts word_check("fruit")       # => "short"
+puts word_check("puzzle")      # => "medium"
